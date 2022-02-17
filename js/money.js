@@ -30,12 +30,12 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     if (isNaN(foodInput) || foodInput < 0) {
         if (foodInput > incomeInput) {}
         foodInput.value = '';
-        return alert('Invali Amount');
+        return alert('Invalid Amount');
     }
     if (isNaN(rentInput) || rentInput < 0) {
         if (rentInput > incomeInput) {}
         rentInput.value = '';
-        return alert('Invali Amount');
+        return alert('Invalid Amount');
     }
 
     rentInput.value = '';
@@ -43,7 +43,7 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     if (isNaN(clothesInput) && clothesInput < 0) {
         if (clothesInput > incomeInput) {}
         clothesInput.value = '';
-        return alert('Invali Amount');
+        return alert('Invalid Amount');
     }
 
     clothesInput.value = '';
@@ -66,6 +66,8 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     getBalance.innerText = balance;
 
     document.getElementById('saving-btn').addEventListener('click', function () {
+        // error
+
         const savingInput = document.getElementById('saving-input');
         const savingInputValue = parseFloat(savingInput.value);
         const savingAmount = (incomeInput / 100) * savingInputValue;
@@ -79,27 +81,17 @@ document.getElementById('calc-btn').addEventListener('click', function () {
         const remainingBalance = balance - savingAmount;
         remBalance.innerText = remainingBalance;
 
+        if (isNaN(savingAmount) || savingAmount < 0) {
+            savingAmount.value = '';
+            return alert('Please input valid amount of money in number type');
+        }
+
+        if (savingAmount > balance) {
+            alert('insufficient balance')
+        }
+
 
 
     })
 
 })
-
-// saving balance
-// document.getElementById('saving-btn').addEventListener('click', function () {
-//     const savingInput = document.getElementById('saving-input');
-//     const savingInputValue = parseFloat(savingInput.value);
-//     const savingAmount = savingInputValue * 100;
-//     savingInput.innerText = savingAmount;
-//     const savingAmountInput = document.getElementById('saving-amount');
-//     const savingAmountValue = parseFloat(savingAmountInput.innerText);
-//     savingAmountInput.innerText = savingAmount;
-
-//     const remBalance = document.getElementById('rem-balance');
-//     const remBalanceValue = parseFloat(remBalance.innerText);
-//     const remainingBalance = balance - savingAmount;
-//     remBalance.innerText = remainingBalance;
-
-
-
-// })

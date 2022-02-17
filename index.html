@@ -14,13 +14,13 @@
 
 <body>
     <!-- body starts here -->
-    <h1 class="text-green-700 text-center center text-5xl mt-3 font-bold">Money Calculator</h1>
+    <h1 class="text-green-700 text-center center sm:text-3xl  lg:text-5xl mt-3 font-bold">Money Calculator</h1>
 
     <!-- section starts here -->
     <section class="mt-8 container mx-auto">
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <img class="rounded" src="image/taka-tracker.jpg" alt="">
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="sm:order-first">
+                <img class="rounded" src="images/money.jpg" alt="">
             </div>
             <div class="bg-zinc-200 rounded">
                 <div>
@@ -32,11 +32,12 @@
                     <h4 class="mt-4 text-xl font-bold text-center">Expenses</h4>
                     <h5 class="font-semibold mt-3 text-center">Food : <input id="food-input" type="text"></h5>
                     <h5 class="font-semibold mt-3 text-center">Rent: <input id="rent-input" type="text"></h5>
-                    <h5 class="font-semibold mt-3 text-center">Clothes: <input id="clothes-input" type="text"> <span id="error"></span></h5>
+                    <h5 class="font-semibold mt-3 text-center">Clothes: <input id="clothes-input" type="text"> <span
+                            id="error"></span></h5>
                 </div>
 
                 <div class="m-4 text-center">
-                    <button id="calc-btn" class="bg-blue-400 p-2 rounded">Calculate </button>
+                    <button id="calc-btn" class="bg-blue-400 p-2 rounded text-white">Calculate </button>
                     <div>
                         <h3 class="font-bold mt-2">Total Expenses: <span id="expenses-input">00</span></h3>
                     </div>
@@ -46,8 +47,9 @@
                 </div>
 
                 <div class="text-center">
-                    <h2 class="font-semibold">Savings: <input id="saving-input" class="w-1/4" type="text"> <span>% </span>
-                        <button id="saving-btn" class="bg-blue-400 p-1 rounded">Save</button></h2>
+                    <h2 class="font-semibold">Savings: <input id="saving-input" class="w-1/4" type="text"> <span>%
+                        </span>
+                        <button id="saving-btn" class="bg-blue-400 p-1 rounded text-white">Save</button></h2>
                     <h3 class="font-bold mt-2">Saving Amount: <span id="saving-amount">00</span> </h3>
                     <h3 class="m-2 font-bold mt-2">Remaining Balance: <span id="rem-balance">00</span> </h3>
 
