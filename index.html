@@ -5,58 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOOTSTRAP LINK -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- FONT AWESOME LINK -->
-    <script src="https://kit.fontawesome.com/a8554e5775.js" crossorigin="anonymous"></script>
-
+    <!-- title of the document here -->
     <title>Money Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
+    <!-- body starts here -->
+    <h1 class="text-green-700 text-center center text-5xl mt-3 font-bold">Money Calculator</h1>
 
-    <header></header>
-
-    <main>
-        <section class="container">
-            <h1 class="section-title text-center">Money Calculator </h1>
-            <div class="row">
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="images/money.jpg" alt="">
+    <!-- section starts here -->
+    <section class="mt-8 container mx-auto">
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <img class="rounded" src="image/taka-tracker.jpg" alt="">
+            </div>
+            <div class="bg-zinc-200 rounded">
+                <div>
+                    <h4 class="mt-2 text-xl font-bold text-center">Income</h4>
+                    <h5 class="font-semibold mt-3 text-center">Income: <input id="income-input" type="text"></h5>
                 </div>
-                <div class="col-lg-6">
-                    <form class="income-form bg-success p-5">
-                        <div class="income mb-4">
-                            <h3 class="text-center">Income</h3>
-                            <label for="income-input">Income:
-                                <input class="income-input" type="text" id="income-input">
-                            </label>
-                           
-                        </div>
-                        <div class="Expenses">
-                            <h4 class="text-center">Expences</h4>
-                            <label for="food-input">Food:
-                                <input class="food-input" type="text" id="food-input">
-                            </label>
-                            <label for="rent-input">Rent:
-                                <input class="rent-input" type="text" id="rent-input">
-                            </label>
-                            <label for="income-input">Clothes:
-                                <input class="income-input" type="text" id="income-input">
-                            </label>
-                        </div>
 
+                <div>
+                    <h4 class="mt-4 text-xl font-bold text-center">Expenses</h4>
+                    <h5 class="font-semibold mt-3 text-center">Food : <input id="food-input" type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Rent: <input id="rent-input" type="text"></h5>
+                    <h5 class="font-semibold mt-3 text-center">Others: <input id="others-input" type="text"></h5>
+                </div>
 
-                    </form>
+                <div class="m-4 text-center">
+                    <button id="calculate-btn" class="bg-blue-400 p-2 rounded">Calculate</button>
+                    <div>
+                        <h3 class="font-bold mt-2">Total Expenses: <span id="expenses-input">00</span></h3>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mt-2">Balance: <span id="balance-input">00</span></h3>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="font-semibold">Savings: <input class="w-1/4" type="text"> <span>% </span><button
+                            class="bg-blue-400 p-1 rounded">Save</button></h2>
+                    <h3 class="font-bold mt-2">Saving Amount: </h3>
+                    <h3 class="m-2 font-bold mt-2">Remaining Balance: </h3>
+
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
 
-
+    <!-- javascript file connect here -->
     <script src="js/money.js"></script>
 </body>
 
