@@ -83,7 +83,7 @@ document.getElementById('calc-btn').addEventListener('click', function () {
 
         if (isNaN(savingAmount) || savingAmount < 0) {
             savingAmount.value = '';
-            return alert('Please input valid amount of money in number type');
+            return alert('Invalid amount');
         }
 
         if (savingAmount > balance) {
