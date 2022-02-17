@@ -19,6 +19,39 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     const rentInput = getInput('rent-input');
     const clothesInput = getInput('clothes-input');
     const totalInputAmount = foodInput + rentInput + clothesInput;
+    // error msg
+    if (isNaN(incomeInput) || incomeInput < 0) {
+        incomeInput.value = '';
+        return alert('Invali Amount')
+    }
+
+    incomeInput.value = '';
+
+    if (isNaN(foodInput) || foodInput < 0) {
+        if (foodInput > incomeInput) {}
+        foodInput.value = '';
+        return alert('Invali Amount');
+    }
+    if (isNaN(rentInput) || rentInput < 0) {
+        if (rentInput > incomeInput) {}
+        rentInput.value = '';
+        return alert('Invali Amount');
+    }
+
+    rentInput.value = '';
+
+    if (isNaN(clothesInput) && clothesInput < 0) {
+        if (clothesInput > incomeInput) {}
+        clothesInput.value = '';
+        return alert('Invali Amount');
+    }
+
+    clothesInput.value = '';
+    if (totalInputAmount > incomeInput) {
+        totalInputAmount.value = '';
+        return alert('insuffient balance');
+    }
+    totalInputAmount.value = '';
 
     // total balance
     const expensesBalance = document.getElementById('expenses-input');
