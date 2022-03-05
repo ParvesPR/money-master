@@ -71,24 +71,27 @@ document.getElementById('calc-btn').addEventListener('click', function () {
         const savingInput = document.getElementById('saving-input');
         const savingInputValue = parseFloat(savingInput.value);
         const savingAmount = (incomeInput / 100) * savingInputValue;
-        savingInput.innerText = savingAmount;
+
         const savingAmountInput = document.getElementById('saving-amount');
         const savingAmountValue = parseFloat(savingAmountInput.innerText);
-        savingAmountInput.innerText = savingAmount;
 
-        const remBalance = document.getElementById('rem-balance');
-        const remBalanceValue = parseFloat(remBalance.innerText);
-        const remainingBalance = balance - savingAmount;
-        remBalance.innerText = remainingBalance;
 
         if (isNaN(savingAmount) || savingAmount < 0) {
-            savingAmount.value = '';
             return alert('Invalid amount');
         }
-
         if (savingAmount > balance) {
-            alert('insufficient balance')
-        }
+            return alert('insufficient balance')
+        } 
+
+        savingInput.innerText = savingAmount;
+        savingAmountInput.innerText = savingAmount;
+        const remBalance = document.getElementById('rem-balance');
+        const remBalanceValue = parseFloat(remBalance.innerText);
+
+        
+        remBalance.innerText = remainingBalance;
+        const remainingBalance = balance - savingAmount;
+
 
 
 
